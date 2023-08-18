@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Veslemøy Andersen</title>
+
+		<style>
+
+			body{
+				margin: 0;
+				background-color: rgb(255, 255, 255);
+			}
+
+			.container{
+				width: 100vw;
+				height: 100vh;
+
+				font-family: sans-serif;
+				font-size: 1rem;
+
+				/*grid*/
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: 150px 1fr 1fr 150px; /*adapt to window size*/
+				gap: 10px;
+				padding: 0.625em;
+				box-sizing: border-box;
+			}	
+
+			.container div{
+				padding: 10px;
+				border-radius: 12px;
+			}
+
+			.header{
+				grid-row: 1/span 1;
+				grid-column: 2/span 3;
+				text-align: center;
+				/*background-color: rgb(0, 0, 102, 0.8);*/
+			}
+
+			
+			
+
+			.main{
+				grid-row: 2/span 3;
+				grid-column: 2/span 3;
+				/*border: solid 1px black;*/
+				padding-bottom: 10px;
+
+			}
+
+			/*
+			- Flex-grid:
+				https://codepen.io/BabiHR/pen/NWPXjRVn
+			*/
+			
+			/*Main content*/
+			.flex-grid {
+			  /*border: 1px solid #000;*/
+			  min-height: 10%;
+			  display: flex;
+			  flex-wrap: wrap;
+			  flex-direction: row;
+			  align-items: center;
+			  justify-content: center;
+			}
+
+			.flex-grid > div {
+			  display: flex; 
+			  flex-basis: calc(35% - 45px);  
+			  flex-direction: column;
+			  margin: 5px;
+			}
+
+			.flex-grid > div > div {
+			  display: flex;
+			  flex-direction: row;
+			}
+
+			.box{
+				width: 25vw;
+				height: 25vh;
+				margin: 5px;
+				display: flex;
+				border-radius: 10px;
+				border: 1px solid rgb(192,192,192);
+				transition: rgb(192,192,192) box-shadow .3s;
+
+			}
+
+			.box:hover, .box:focus{
+				transition: .3s;
+				box-shadow: 0 0 40px
+				rgb(255,192,203);
+			}
+
+
+
+
+			.footer{
+				grid-row: 5/span 1;
+				grid-column: 2/span 3;
+				
+			}
+
+		</style>
+	</head>	
+
+
+	<body>
+	<div class = "container">
+		<div class = "header">	
+			<h1>Veslemøys verden</h1>
+
+		</div>
+
+		<div class = "main">
+				 <div class="flex-grid">
+					  <div class = "box" tabindex="1">1</div>
+					  <div class = "box" tabindex="2">2</div>
+					  <div class = "box" tabindex="3">3</div>
+					  <div class = "box" tabindex="4">4</div> 
+				</div>
+		</div>
+
+		<div class = "footer">
+			<p>hehehe</p>
+		</div>
+	</div>
+	</body>
+			
+	
+</html>
